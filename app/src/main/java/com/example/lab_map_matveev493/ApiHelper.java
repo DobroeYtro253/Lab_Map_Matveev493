@@ -15,7 +15,14 @@ public class ApiHelper {
         this.ctx = ctx;
     }
 
-    public void on_ready(String res){}
+    public void on_ready(String res)
+    {
+
+    }
+    public void on_fail(String res)
+    {
+
+    }
 
     String http_get(String req) throws IOException
     {
@@ -47,12 +54,12 @@ public class ApiHelper {
         public void run() {
             try
             {
-                ctx.runOnUiThread(() ->
+                final String res = http_get(req);
+                ctx.runOnUiThread(new Runnable()
                 {
-                    try {
-                        http_get(req);
-                    } catch (IOException e) {
-                        e.printStackTrace();
+                    public void run()
+                    {
+                        on_ready(res);
                     }
                 });
             }

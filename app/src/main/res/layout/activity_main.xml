@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:layout_width="169dp"
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:orientation="horizontal">
@@ -28,12 +28,30 @@
             android:layout_margin="5dp"
             android:onClick="ZoomOut"
             android:text="-" />
+
+        <Button
+            android:id="@+id/buttonSetting"
+            android:layout_width="61dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:onClick="settingMenu"
+            android:text="S" />
+
+        <Spinner
+            android:id="@+id/spinnerType"
+            android:layout_width="164dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:entries="@array/TypeMap" />
+
     </LinearLayout>
 
     <com.example.lab_map_matveev493.MapView
         android:id="@+id/mapView"
-        android:layout_width="match_parent"
-        android:layout_height="601dp"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
         android:layout_weight="1" />
 
 </LinearLayout>

@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">lab_Map_Matveev493</string>
+    <string-array name="TypeMap">
+        <item>nothing</item>
+        <item>coastline</item>
+        <item>river</item>
+        <item>road</item>
+        <item>railroad</item>
+    </string-array>
 </resources>
